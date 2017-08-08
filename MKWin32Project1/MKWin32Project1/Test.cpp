@@ -1,22 +1,17 @@
 #include "DxLib.h"
 #include "Test.h"
-#include <stdio.h>
-#include <iostream>
 #include <vector>
 #include <math.h>
 using namespace std;
 
-static enum GameMode {
-	Title,Main,Result
-};
-
+#define SCROLL_SPEED 2;
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	ChangeWindowMode(TRUE); // ウィンドウモードに設定
-	SetWindowSize(800, 600);// ウィンドウサイズを設定
-	SetGraphMode(800, 600, 8);//画像解像度を設定
+	SetWindowSize(480, 600);// ウィンドウサイズを設定
+	SetGraphMode(480, 600, 8);//画像解像度を設定
 	//SetDrawScreen(DX_SCREEN_BACK);
 
 	// ＤＸライブラリ初期化処理
@@ -24,6 +19,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	
 	Player* p = new Player();//プレイヤー初期化
 	Bullet* b = new Bullet();//弾初期化
+	BACK* back = new BACK();//背景初期化
 	
 	while (ProcessMessage() == 0)
 	{
@@ -33,7 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//範囲制限
 		if (p->x <= 20) { p->x = 20; }
 		if (p->y <= 40) { p->y = 40; }
-		if (p->x >= 800) { p->x = 800 - 40; }
+		if (p->x >= 480) { p->x = 480 - 40; }
 		if (p->y >= 600) { p->y = 600 - 20; }
 
 		//キー入力の確認
@@ -45,19 +41,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		
 
 		//背景
-		int bg = LoadGraph("Resource/lgi01a201412150700.jpg");
-		DrawGraph(0, 0, bg, FALSE);
-
+		
+		//1枚目描画
+		DrawGraph(back->x, back->y, back->gh, FALSE);
+		//二枚目描画
+		DrawGraph(back->x, back->y + 1065, back->gh, FALSE);
+		back->y -= SCROLL_SPEED;
+		if (back->y <= -1065) { back->y = 0; }
+		
 		//playerの表示
 		int GHandle = LoadGraph("Resource/supercharged-rocket.png");
 		DrawRotaGraph(p->x, p->y, p->Scale, p->Angle, GHandle, TRUE);
 		
 		//弾のキー入力の確認
-		if (CheckHitKey(KEY_INPUT_SPACE))
+		/*if (CheckHitKey(KEY_INPUT_SPACE))
 		{
 			//printfDx("Bullet");
 			DrawGraph(b->Spawn_x, b->Spawn_y, b->B_Handle, TRUE);
-		}
+		}*/
 
 		ScreenFlip();//描画処理
 	}

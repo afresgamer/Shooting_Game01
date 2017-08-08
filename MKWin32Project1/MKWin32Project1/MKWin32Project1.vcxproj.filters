@@ -29,6 +29,12 @@
     <Image Include="Resource\bullet-36942_960_720.png">
       <Filter>リソース ファイル</Filter>
     </Image>
+    <Image Include="Resource\5617c4b689f040fd5e40422bcb1f5d78--galaxy-space-science-nature.jpg">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="Resource\65e78013a5e2efff7467e9ee1fa7d00a--backgrounds-wallpapers-iphone-wallpaper.jpg">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Test.h">
