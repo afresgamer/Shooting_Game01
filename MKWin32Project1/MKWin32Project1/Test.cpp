@@ -1,4 +1,3 @@
-#include "DxLib.h"
 #include "Test.h"
 #include <vector>
 #include <math.h>
@@ -20,6 +19,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	Player* p = new Player();//ƒvƒŒƒCƒ„[‰Šú‰»
 	Bullet* b = new Bullet();//’e‰Šú‰»
 	BACK* back = new BACK();//”wŒi‰Šú‰»
+	//”­Ëƒtƒ‰ƒO
+	bool isBulletMove = false;
+	//”­Ë‰Â”\’e”
+	int Bullet_count = 0;
 	
 	while (ProcessMessage() == 0)
 	{
@@ -38,14 +41,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		if (CheckHitKey(KEY_INPUT_RIGHT) || CheckHitKey(KEY_INPUT_D)) { p->x += p->Speed; p->Angle = p->Plus_angle; }
 		if (CheckHitKey(KEY_INPUT_LEFT) || CheckHitKey(KEY_INPUT_A)) { p->x -= p->Speed; p->Angle = -p->Plus_angle; }
 		if (!CheckHitKeyAll()) { p->Angle = 0; }	//Šp“x‰Šú‰»
-		
+		//’e”­Ë
+		if (CheckHitKey(KEY_INPUT_SPACE)) { isBulletMove = true; Bullet_count++; }
+
 
 		//”wŒi
-		
 		//1–‡–Ú•`‰æ
 		DrawGraph(back->x, back->y, back->gh, FALSE);
 		//“ñ–‡–Ú•`‰æ
 		DrawGraph(back->x, back->y + 1065, back->gh, FALSE);
+		//ˆÚ“®‚ÆˆÚ“®”»’è
 		back->y -= SCROLL_SPEED;
 		if (back->y <= -1065) { back->y = 0; }
 		
@@ -53,12 +58,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		int GHandle = LoadGraph("Resource/supercharged-rocket.png");
 		DrawRotaGraph(p->x, p->y, p->Scale, p->Angle, GHandle, TRUE);
 		
-		//’e‚ÌƒL[“ü—Í‚ÌŠm”F
-		/*if (CheckHitKey(KEY_INPUT_SPACE))
+		//’e‚Ì“®‚«‚Æ§Œä
+		if (isBulletMove)
 		{
 			//printfDx("Bullet");
-			DrawGraph(b->Spawn_x, b->Spawn_y, b->B_Handle, TRUE);
-		}*/
+			for (int i = Bullet_count; i < 3; i++) 
+			{
+				DrawRotaGraph(b->Spawn_x, b->Spawn_y - 20, b->scale, 0, b->B_Handle, TRUE);
+				b->Spawn_y -= 2;
+			}
+			if (b->Spawn_y <= 0.1f) {
+				isBulletMove = false;
+				b->Spawn_y = p->y - 20;
+			}
+		}
 
 		ScreenFlip();//•`‰æˆ—
 	}
