@@ -32,7 +32,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//îÕàÕêßå¿
 		if (p->x <= 20) { p->x = 20; }
 		if (p->y <= 40) { p->y = 40; }
-		if (p->x >= 480) { p->x = 480 - 40; }
+		if (p->x >= 480) { p->x = 480 - 20; }
 		if (p->y >= 600) { p->y = 600 - 20; }
 
 		//ÉLÅ[ì¸óÕÇÃämîF
@@ -42,7 +42,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		if (CheckHitKey(KEY_INPUT_LEFT) || CheckHitKey(KEY_INPUT_A)) { p->x -= p->Speed; p->Angle = -p->Plus_angle; }
 		if (!CheckHitKeyAll()) { p->Angle = 0; }	//äpìxèâä˙âª
 		//íeî≠éÀ
-		if (CheckHitKey(KEY_INPUT_SPACE)) { isBulletMove = true; Bullet_count++; }
+		if (CheckHitKey(KEY_INPUT_SPACE)) { isBulletMove = true; b->Spawn_x = p->x; }
 
 
 		//îwåi
@@ -61,15 +61,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//íeÇÃìÆÇ´Ç∆êßå‰
 		if (isBulletMove)
 		{
-			//printfDx("Bullet");
-			for (int i = Bullet_count; i < 3; i++) 
-			{
-				DrawRotaGraph(b->Spawn_x, b->Spawn_y - 20, b->scale, 0, b->B_Handle, TRUE);
-				b->Spawn_y -= 2;
-			}
+			DrawRotaGraph(b->Spawn_x, b->Spawn_y - 20, b->scale, 0, b->B_Handle, TRUE);
+			b->Spawn_y -= 2;
 			if (b->Spawn_y <= 0.1f) {
 				isBulletMove = false;
-				b->Spawn_y = p->y - 20;
+				b->Spawn_y = p->y - 10;
 			}
 		}
 

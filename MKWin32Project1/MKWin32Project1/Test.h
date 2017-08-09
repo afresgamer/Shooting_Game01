@@ -17,10 +17,11 @@ class Bullet
 public:
 	int Speed = 50;
 	Player* p = new Player();
+	const int max_B = 5;
 	int B_Handle = LoadGraph("Resource/bullet-36942_960_720.png");
 	//’e”­¶ƒ|ƒCƒ“ƒg•Ï”
 	int Spawn_x = p->x;
-	int Spawn_y = p->y - 20;
+	int Spawn_y = p->y - 10;
 	double scale = 0.1f;
 
 };
