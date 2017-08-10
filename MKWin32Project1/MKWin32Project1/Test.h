@@ -1,5 +1,6 @@
 #pragma once
 #include "DxLib.h"
+using namespace std;
 
 class Player
 {
@@ -15,14 +16,14 @@ public:
 class Bullet
 {
 public:
-	int Speed = 50;
-	Player* p = new Player();
+	int Speed = 30;
+	void SetPos(int, int);//プレイヤーと敵で位置を決定
 	const int max_B = 5;
 	int B_Handle = LoadGraph("Resource/bullet-36942_960_720.png");
 	//弾発生ポイント変数
-	int Spawn_x = p->x;
-	int Spawn_y = p->y - 10;
-	double scale = 0.1f;
+	int Spawn_x;
+	int Spawn_y;
+	double scale = 0.08f;
 
 };
 
@@ -36,4 +37,16 @@ private:
 
 };
 
+class Meteorite
+{
+public:
+	//Meteorite(int,int,int,int,double);
+	int x;
+	int y = 0;
+	int speed = 10;
+	double scale = 0.5f;
+	double angle = -0.8f;
+	int num = 5;
+	int m_G = LoadGraph("Resource/comet.png");
+};
 
