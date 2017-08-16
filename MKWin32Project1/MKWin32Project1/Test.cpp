@@ -11,6 +11,13 @@ void Bullet::SetPos(int x, int y)
 	Spawn_y = y;
 }
 
+//“–‚½‚è”»’è
+bool IsIntersect() {
+
+	
+	return false;
+}
+
 // ƒvƒƒOƒ‰ƒ€‚Í WinMain ‚©‚çn‚Ü‚è‚Ü‚·
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
