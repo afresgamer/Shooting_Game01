@@ -5,8 +5,10 @@ using namespace std;
 class Player
 {
 public:
-	int x = 240;//初期位置高さ
-	int y = 500;//初期位置幅
+	int x = 240;//初期位置x
+	int y = 500;//初期位置y
+	int w;
+	int h;
 	double Angle = 0;//初期角度
 	int GHandle = LoadGraph("Resource/supercharged-rocket.png");
 	int Speed = 10;//スピード
@@ -24,6 +26,8 @@ public:
 	//弾発生ポイント変数
 	int Spawn_x;
 	int Spawn_y;
+	int w;
+	int h;
 	double scale = 0.08f;
 };
 
@@ -40,10 +44,31 @@ class Meteorite
 public:
 	int x;
 	int y = 0;
+	int w;
+	int h;
 	int speed = 10;
-	double scale = 0.5f;
+	double scale = 1;
 	double angle = -0.8f;
+	//出現個数
 	int num = 5;
 	int m_G = LoadGraph("Resource/comet.png");
 };
 
+class Explosion
+{
+public:
+	int x;
+	int y;
+	double scale = 1;
+	//画像データの呼び出し
+	int GHandle[10] = 
+	{ 
+		LoadGraph("Resource/Explosion (1).png"), LoadGraph("Resource/Explosion (2).png") ,LoadGraph("Resource/Explosion (3).png") 
+		,LoadGraph("Resource/Explosion (4).png") ,LoadGraph("Resource/Explosion (5).png") ,LoadGraph("Resource/Explosion (6).png")
+		,LoadGraph("Resource/Explosion (7).png") ,LoadGraph("Resource/Explosion (8).png") ,LoadGraph("Resource/Explosion (9).png")
+		,LoadGraph("Resource/Explosion (10).png")
+	};
+	int timer = GetNowCount();
+	//描画処理
+	void Draw();
+};

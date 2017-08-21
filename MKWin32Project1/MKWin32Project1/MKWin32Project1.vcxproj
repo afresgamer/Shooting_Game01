@@ -158,11 +158,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resource\5617c4b689f040fd5e40422bcb1f5d78--galaxy-space-science-nature.jpg" />
     <Image Include="Resource\65e78013a5e2efff7467e9ee1fa7d00a--backgrounds-wallpapers-iphone-wallpaper.jpg" />
     <Image Include="Resource\bullet-36942_960_720.png" />
     <Image Include="Resource\comet.png" />
-    <Image Include="Resource\lgi01a201402242000.jpg" />
+    <Image Include="Resource\Explosion (1).png" />
+    <Image Include="Resource\Explosion (10).png" />
+    <Image Include="Resource\Explosion (2).png" />
+    <Image Include="Resource\Explosion (3).png" />
+    <Image Include="Resource\Explosion (4).png" />
+    <Image Include="Resource\Explosion (5).png" />
+    <Image Include="Resource\Explosion (6).png" />
+    <Image Include="Resource\Explosion (7).png" />
+    <Image Include="Resource\Explosion (8).png" />
+    <Image Include="Resource\Explosion (9).png" />
     <Image Include="Resource\lgi01a201412150700.jpg" />
     <Image Include="Resource\supercharged-rocket.png" />
   </ItemGroup>
