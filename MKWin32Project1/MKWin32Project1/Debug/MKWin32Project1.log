@@ -1,4 +1,4 @@
-﻿  Test.cpp
-c:\users\owner\documents\shooting_game01\mkwin32project1\mkwin32project1\test.cpp(126): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  MKWin32Project1.vcxproj -> C:\Users\owner\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.exe
-  MKWin32Project1.vcxproj -> C:\Users\owner\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.pdb (Full PDB)
+﻿  GameManager.cpp
+c:\users\student\documents\shooting_game01\mkwin32project1\mkwin32project1\gamemanager.cpp(81): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  MKWin32Project1.vcxproj -> C:\Users\student\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.exe
+  MKWin32Project1.vcxproj -> C:\Users\student\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.pdb (Full PDB)

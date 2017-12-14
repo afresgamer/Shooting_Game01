@@ -152,10 +152,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Test.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\DXLib\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\DXLib\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Meteorite.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\65e78013a5e2efff7467e9ee1fa7d00a--backgrounds-wallpapers-iphone-wallpaper.jpg" />
@@ -175,7 +178,14 @@
     <Image Include="Resource\supercharged-rocket.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Test.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Meteorite.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="BACK.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
