@@ -13,7 +13,7 @@ SystemManager::~SystemManager()
 
 bool SystemManager::Init()
 {
-	ChangeWindowMode(TRUE); // ウィンドウモードに設定
+	ChangeWindowMode(true); // ウィンドウモードに設定
 	SetWindowSize(480, 600);// ウィンドウサイズを設定
 	SetGraphMode(480, 600, 8);//画像解像度を設定
 	SetFontSize(SCORE_SIZE);//文字サイズ

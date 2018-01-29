@@ -1,2 +1,10 @@
-﻿  MKWin32Project1.vcxproj -> C:\Users\owner\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.exe
-  MKWin32Project1.vcxproj -> C:\Users\owner\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.pdb (Full PDB)
+﻿  SystemManager.cpp
+  player.cpp
+  Meteorite.cpp
+  Main.cpp
+  GameManager.cpp
+c:\users\maki\documents\shooting_game01\mkwin32project1\mkwin32project1\gamemanager.cpp(81): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  Explosion.cpp
+  Bullet.cpp
+  コードを生成中...
+  MKWin32Project1.vcxproj -> C:\Users\maki\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.exe

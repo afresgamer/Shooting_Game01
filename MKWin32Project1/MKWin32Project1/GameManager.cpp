@@ -51,16 +51,16 @@ void GameManager::Update()
 
 	//”wŒi
 	//1–‡–Ú•`‰æ
-	DrawGraph(m_back->x, m_back->y, m_back->gh, FALSE);
+	DrawGraph(m_back->x, m_back->y, m_back->gh, false);
 	//“ñ–‡–Ú•`‰æ
-	DrawGraph(m_back->x, m_back->y - 1065, m_back->gh, FALSE);
+	DrawGraph(m_back->x, m_back->y - 1065, m_back->gh, false);
 	//ˆÚ“®‚ÆˆÚ“®”»’è
 	m_back->y += SCROLL_SPEED;
 	if (m_back->y >= 1065) { m_back->y = 0; }
 
 	//player‚Ì•\Ž¦
 	m_player->y += GRAVITY;
-	DrawRotaGraph(m_player->x, m_player->y, m_player->Scale, m_player->Angle, m_player->GHandle, TRUE);
+	DrawRotaGraph(m_player->x, m_player->y, m_player->Scale, m_player->Angle, m_player->GHandle, true);
 
 	if (m_isShot) { m_isBulletMove = true; m_bullet->Spawn_x = m_player->x; m_isShot = false; }
 
@@ -68,7 +68,7 @@ void GameManager::Update()
 	if (m_isBulletMove)
 	{
 		m_bullet->Spawn_y -= m_bullet->Speed;
-		DrawRotaGraph(m_bullet->Spawn_x, m_bullet->Spawn_y - 20, m_bullet->scale, 0, m_bullet->B_Handle, TRUE);
+		DrawRotaGraph(m_bullet->Spawn_x, m_bullet->Spawn_y - 20, m_bullet->scale, 0, m_bullet->B_Handle, true);
 
 		if (m_bullet->Spawn_y <= 0)
 		{
@@ -80,7 +80,7 @@ void GameManager::Update()
 	//“G‚Ì•\Ž¦
 	for (int i = 0; i < m_meteVec.size(); i++)
 	{
-		DrawRotaGraph(m_meteVec[i].x, m_meteVec[i].y, m_meteVec[i].scale, m_meteVec[i].angle, m_meteVec[i].m_G, TRUE);
+		DrawRotaGraph(m_meteVec[i].x, m_meteVec[i].y, m_meteVec[i].scale, m_meteVec[i].angle, m_meteVec[i].m_G, true);
 		m_meteVec[i].y += m_meteorite[i].speed;
 		if (m_meteVec[i].y > 630)
 		{
