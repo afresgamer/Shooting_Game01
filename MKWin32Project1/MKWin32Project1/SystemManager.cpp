@@ -18,8 +18,8 @@ bool SystemManager::Init()
 	SetGraphMode(480, 600, 8);//画像解像度を設定
 	SetFontSize(SCORE_SIZE);//文字サイズ
 	ChangeFontType(DX_FONTTYPE_ANTIALIASING_EDGE);//文字の端のライン表示
-												  // ＤＸライブラリ初期化処理
-	if (DxLib_Init() == -1) { return false; }// エラーが起きたら直ちに終了
+												 
+	if (DxLib_Init() == -1) { return false; }//ＤＸライブラリ初期化処理  エラーが起きたら直ちに終了
 
 	m_gameMgr = new GameManager();
 	return true;

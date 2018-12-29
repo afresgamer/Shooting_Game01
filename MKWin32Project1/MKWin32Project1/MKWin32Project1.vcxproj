@@ -153,6 +153,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -163,7 +165,6 @@
   <ItemGroup>
     <Image Include="Resource\65e78013a5e2efff7467e9ee1fa7d00a--backgrounds-wallpapers-iphone-wallpaper.jpg" />
     <Image Include="Resource\bullet-36942_960_720.png" />
-    <Image Include="Resource\comet.png" />
     <Image Include="Resource\Explosion (1).png" />
     <Image Include="Resource\Explosion (10).png" />
     <Image Include="Resource\Explosion (2).png" />
@@ -174,18 +175,25 @@
     <Image Include="Resource\Explosion (7).png" />
     <Image Include="Resource\Explosion (8).png" />
     <Image Include="Resource\Explosion (9).png" />
+    <Image Include="Resource\JP_MTGANN_Symbol.png" />
     <Image Include="Resource\lgi01a201412150700.jpg" />
     <Image Include="Resource\supercharged-rocket.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Meteorite.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="player.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="SystemManager.h" />
     <ClInclude Include="BACK.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resource\tw067.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -16,7 +16,7 @@ public:
 		,LoadGraph("Resource/Explosion (7).png") ,LoadGraph("Resource/Explosion (8).png") ,LoadGraph("Resource/Explosion (9).png")
 		,LoadGraph("Resource/Explosion (10).png")
 	};
-	int timer = GetNowCount();
+	int timer;
 	//ï`âÊèàóù
-	void Draw();
+	void Draw(int frame);
 };

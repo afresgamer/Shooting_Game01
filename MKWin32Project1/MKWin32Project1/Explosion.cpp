@@ -1,9 +1,6 @@
 #include "Explosion.h"
 
-void Explosion::Draw()
+void Explosion::Draw(int frame)
 {
-	for (int i = 0; i < 10; i++)
-	{
-		DrawRotaGraph(x, y, scale, 0, GHandle[i], false);
-	}
+	DrawRotaGraph(x, y, scale, 0, GHandle[frame], false);
 }

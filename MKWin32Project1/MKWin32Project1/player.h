@@ -5,10 +5,11 @@
 class Player
 {
 public:
+	void Update();
 	int x = 240;//初期位置x
 	int y = 500;//初期位置y
-	int w;
-	int h;
+	int w = 40;
+	int h = 90;
 	double Angle = 0;//初期角度
 	int GHandle = LoadGraph("Resource/supercharged-rocket.png");
 	int Speed = 10;//スピード

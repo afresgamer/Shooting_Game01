@@ -36,6 +36,12 @@
     <ClCompile Include="Meteorite.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\supercharged-rocket.png">
@@ -48,9 +54,6 @@
       <Filter>リソース ファイル</Filter>
     </Image>
     <Image Include="Resource\65e78013a5e2efff7467e9ee1fa7d00a--backgrounds-wallpapers-iphone-wallpaper.jpg">
-      <Filter>リソース ファイル</Filter>
-    </Image>
-    <Image Include="Resource\comet.png">
       <Filter>リソース ファイル</Filter>
     </Image>
     <Image Include="Resource\Explosion (1).png">
@@ -83,6 +86,9 @@
     <Image Include="Resource\Explosion (10).png">
       <Filter>リソース ファイル</Filter>
     </Image>
+    <Image Include="Resource\JP_MTGANN_Symbol.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -109,5 +115,19 @@
     <ClInclude Include="BACK.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resource\tw067.mp3">
+      <Filter>リソース ファイル</Filter>
+    </Media>
   </ItemGroup>
 </Project>

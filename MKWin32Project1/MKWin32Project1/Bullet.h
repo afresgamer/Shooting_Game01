@@ -11,7 +11,7 @@ public:
 	//’e”­¶ƒ|ƒCƒ“ƒg•Ï”
 	int Spawn_x;
 	int Spawn_y;
-	int w;
-	int h;
+	int w = 30;
+	int h = 50;
 	double scale = 0.08f;
 };
