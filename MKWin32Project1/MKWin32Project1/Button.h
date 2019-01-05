@@ -9,19 +9,18 @@ public:
 	void Init();
 	void Update();
 	void Finalize();
-	void Draw();
+	void Draw(int x , int y);
 	void PlayButtonAnim();
 	void StopButtonAnim();
 	void ButtonAnim();
 	void SetbtnColor(unsigned int color);
 	void SetTextColor(unsigned int color);
+	bool IsPressed;
 private:
 	int mouse, mouseX, mouseY;
 	unsigned int btnColor, TextColor;
 	int InitmX, InitmY, InitmW, InitmH;
 	int mX, mY, mW, mH;
-	int size;
 	const char* mStr;
-	bool IsPressed;
 	Collision* collision;
 };

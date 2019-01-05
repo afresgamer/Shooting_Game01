@@ -6,7 +6,7 @@ class Meteorite
 public:
 	/*void Init();
 	int GetEmptyArea();*/
-	bool IsEmpty[7];
+	//bool IsEmpty[6];
 	int x;
 	int y = 0;
 	int w = 40;

@@ -17,6 +17,7 @@ public:
 		,LoadGraph("Resource/Explosion (10).png")
 	};
 	int timer;
+	bool isCreate = false;
 	//•`‰æˆ—
 	void Draw(int frame);
 };

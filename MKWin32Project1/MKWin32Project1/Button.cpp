@@ -33,7 +33,10 @@ void Button::Update()
 	if (collision->IsMouseCollision(mouseX,mouseY,mX,mY,mW,mH))
 	{
 		PlayButtonAnim();
-		if (mouse & MOUSE_INPUT_LEFT) { ButtonAnim(); IsPressed = true; }
+		if (mouse & MOUSE_INPUT_LEFT) {
+			ButtonAnim();
+			IsPressed = true;
+		}
 		else { IsPressed = false; }
 	}
 	else if(!collision->IsMouseCollision(mouseX, mouseY, mX, mY, mW, mH)) {
@@ -46,10 +49,10 @@ void Button::Finalize()
 	delete this;
 }
 
-void Button::Draw() 
+void Button::Draw(int x, int y) 
 {
 	DrawBox(mX, mY, mW, mH, btnColor, TRUE);
-	DrawString(mX + 10, mY + ((mH - mY) / 2 - 10), mStr ,TextColor);
+	DrawString(x, y, mStr ,TextColor);
 }
 
 void Button::ButtonAnim() 
