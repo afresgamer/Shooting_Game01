@@ -1,4 +1,2 @@
-﻿  Test.cpp
-c:\users\owner\desktop\mkwin32project1\mkwin32project1\mkwin32project1\test.cpp(11): warning C4091: 'static ': 変数が何も宣言されていないときは、'GameMode' の左辺を無視します。
-  MKWin32Project1.vcxproj -> C:\Users\owner\Desktop\MKWin32Project1\MKWin32Project1\Debug\MKWin32Project1.exe
-  MKWin32Project1.vcxproj -> C:\Users\owner\Desktop\MKWin32Project1\MKWin32Project1\Debug\MKWin32Project1.pdb (Full PDB)
+﻿  ResultScene.cpp
+  MKWin32Project1.vcxproj -> C:\Users\maki\Documents\Shooting_Game01\MKWin32Project1\Debug\MKWin32Project1.exe
