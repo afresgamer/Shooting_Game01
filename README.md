@@ -1,6 +1,8 @@
 # Shooting_Game01
 
-DXライブラリで制作したシューティングゲームです。
+DXライブラリで制作したシューティングゲームです。 
+下記の実際のプレイ画像です。
+![プレイ画像](https://github.com/afresgamer/Shooting_Game01/blob/main/C%2B%2B%20Shooting%20Game.gif)
 
 # 参考資料
 
