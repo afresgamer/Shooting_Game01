@@ -8,7 +8,7 @@ bool Collision::IsCollision(int x1, int y1, int w1, int h1, int x2, int y2, int 
 
 bool Collision::IsMouseCollision(int mousePosX, int mousePosY, int x, int y, int w, int h)
 {
-	if (mousePosX >= x && mousePosX <= x + w && mousePosY >= y && mousePosY <= y + h) {
+	if (x <= mousePosX && mousePosX <= x + w && y <= mousePosY && mousePosY <= y + h) {
 		return true;
 	}
 	else { return false; }

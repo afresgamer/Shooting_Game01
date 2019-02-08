@@ -47,7 +47,7 @@ void ResultScene::GameClear()
 
 	DrawGraph(back->x, back->y, back->RBackImage, false);
 
-	button->Draw(170, 465);
+	button->Draw();
 	button->Update();
 	if (button->IsPressed)
 	{
@@ -67,17 +67,13 @@ void ResultScene::GameOver()
 {
 	if (sceneParam->GetBGM()) {
 		StopSoundFile();
-<<<<<<< HEAD
 		PlaySoundFile("Resource/gameover.mp3", DX_PLAYTYPE_LOOP);
-=======
-		PlaySoundFile("Resource/‚³‚ª‚µ‚à‚Ì.mp3", DX_PLAYTYPE_LOOP);
->>>>>>> fc5c319ea7b759d123fa00c9326963419b316632
 		sceneParam->SetBGM(false);
 	}
 
 	DrawGraph(back->x, back->y, back->RBackImage, false);
 
-	button->Draw(170, 465);
+	button->Draw();
 	button->Update();
 	if (button->IsPressed)
 	{

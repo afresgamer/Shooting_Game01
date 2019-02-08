@@ -21,7 +21,7 @@ void TitleScene::Init()
 	back = new BACK();
 
 	//Button
-	button = new Button(200, 400, 300, 500, "Start");
+	button = new Button(200, 400, 100, 100, "Start");
 	button->Init();
 	button->SetbtnColor(GetColor(0, 255, 155));
 	//BGMÄ¶
@@ -32,7 +32,7 @@ void TitleScene::Update()
 {
 	DrawGraph(back->x, back->y, back->TBackImage, false);
 
-	button->Draw(218,440);
+	button->Draw();
 	button->Update();
 	if (button->IsPressed)
 	{

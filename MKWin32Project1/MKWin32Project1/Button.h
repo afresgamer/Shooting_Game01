@@ -9,7 +9,7 @@ public:
 	void Init();
 	void Update();
 	void Finalize();
-	void Draw(int x , int y);
+	void Draw();
 	void PlayButtonAnim();
 	void StopButtonAnim();
 	void ButtonAnim();

@@ -134,17 +134,6 @@ void MainScene::Update()
 	//Life
 	DrawBox(35, 0, 200, 20, GetColor(255, 0, 0), true);
 	DrawBox(35, 0, m_player->Health * 20, 20, GetColor(0, 255, 0), true);
-<<<<<<< HEAD
-	
-=======
-	//Timer
-	timerCount++;
-	if (timerCount > 40)
-	{
-		sceneParam->Timer--;
-		timerCount = 0;
-	}
->>>>>>> fc5c319ea7b759d123fa00c9326963419b316632
 	//GameClear
 	if (sceneParam->Timer == 0 || sceneParam->Timer <= 0)
 	{
@@ -154,7 +143,6 @@ void MainScene::Update()
 		m_player->Health = 10;
 	}
 
-<<<<<<< HEAD
 	//Timer
 	timerCount++;
 	if (timerCount > 40)
@@ -166,9 +154,6 @@ void MainScene::Update()
 	SetFontSize(SCORE_SIZE * 2);
 	DrawFormatString(240, 0, GetColor(255, 0, 255), "%d", sceneParam->Timer);
 	SetFontSize(SCORE_SIZE);
-=======
-	DrawFormatString(290, 0, GetColor(255, 0, 255), "%d", sceneParam->Timer);
->>>>>>> fc5c319ea7b759d123fa00c9326963419b316632
 
 	// Score‚ð•`‰æ‚·‚é
 	DrawString(0, 0, "HP", GetColor(0, 255, 0));

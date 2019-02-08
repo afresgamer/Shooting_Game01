@@ -29,6 +29,7 @@ void Button::Update()
 	//マウスの状態確認
 	mouse = GetMouseInput();
 	GetMousePoint(&mouseX, &mouseY);
+	
 	//カーソルがボタン上にあるとき
 	if (collision->IsMouseCollision(mouseX,mouseY,mX,mY,mW,mH))
 	{
@@ -39,7 +40,7 @@ void Button::Update()
 		}
 		else { IsPressed = false; }
 	}
-	else if(!collision->IsMouseCollision(mouseX, mouseY, mX, mY, mW, mH)) {
+	if(!collision->IsMouseCollision(mouseX, mouseY, mX, mY, mW, mH)) {
 		StopButtonAnim();
 	}
 }
@@ -49,10 +50,16 @@ void Button::Finalize()
 	delete this;
 }
 
-void Button::Draw(int x, int y) 
+void Button::Draw() 
 {
-	DrawBox(mX, mY, mW, mH, btnColor, TRUE);
-	DrawString(x, y, mStr ,TextColor);
+	int sub = 0;
+	if (IsPressed) { sub = 2; }
+
+	int strW = GetDrawStringWidth(mStr, strlen(mStr));
+	DrawBox(mX + sub, mY + sub, mX + mW - sub, mY + mH - sub, btnColor, TRUE);
+	int strX = mX + mW / 2 - strW / 2;
+	int strY = mY + mH / 2 - SCORE_SIZE / 2;
+	DrawString(strX, strY, mStr, TextColor);
 }
 
 void Button::ButtonAnim() 
